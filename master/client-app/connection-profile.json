@@ -1,0 +1,45 @@
+{
+  "name": "FabricMasterNetwork",
+  "version": "1.0.0",
+  "client": {
+    "organization": "Org1",
+    "connection": {
+      "timeout": {
+        "peer": {
+          "endorser": "300"
+        }
+      }
+    }
+  },
+  "organizations": {
+    "Org1": {
+      "mspid": "Org1MSP",
+      "peers": ["fabric-worker-1.org1.example.com"]
+    }
+  },
+  "orderers": {
+    "fabric-master": {
+      "url": "grpcs://localhost:7050",
+      "tlsCACerts": {
+        "path": "/home/medhansh_k/fabric-master/crypto-config/ordererOrganizations/example.com/orderers/fabric-master.example.com/tls/ca.crt"
+      },
+      "grpcOptions": {
+        "ssl-target-name-override": "fabric-master.example.com",
+        "hostnameOverride": "fabric-master.example.com"
+      }
+    }
+  },
+  "peers": {
+    "fabric-worker-1.org1.example.com": {
+      "url": "grpcs://localhost:7051",
+      "tlsCACerts": {
+        "path": "/home/medhansh_k/fabric-worker/crypto/crypto-config/peerOrganizations/org1.example.com/peers/fabric-worker-1.org1.example.com/tls/ca.crt"
+      },
+      "grpcOptions": {
+        "ssl-target-name-override": "fabric-worker-1.org1.example.com",
+        "hostnameOverride": "fabric-worker-1.org1.example.com",
+        "request-timeout": 120000
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+dist/
+build/
+
+# Data and Logs
+*.log
+storage/
+tailscale/state/
+/master/storage/
+/worker/storage/
+/testbed/storage/
+/master/tailscale/state/
+/worker/tailscale/state/
+/testbed/tailscale/state/
+
+# Environment
+.env
+*.env
+
+# System
+.DS_Store
+Thumbs.db

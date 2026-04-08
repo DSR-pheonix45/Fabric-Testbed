@@ -1,0 +1,17 @@
+OrdererOrgs:
+  - Name: Orderer
+    Domain: example.com
+    EnableNodeOUs: true
+    Specs:
+      - Hostname: fabric-master
+
+PeerOrgs:
+  - Name: Org1
+    Domain: org1.example.com
+    EnableNodeOUs: true
+    Specs:
+      - Hostname: fabric-worker-1
+      - Hostname: fabric-worker-2
+      - Hostname: fabric-worker-3
+    Users:
+      Count: 1

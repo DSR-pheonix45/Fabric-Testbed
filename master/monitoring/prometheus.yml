@@ -1,0 +1,20 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'fabric-peers'
+    static_configs:
+      - targets: ['fabric-worker-1:9443', 'fabric-worker-2:9443', 'fabric-worker-3:9443']
+
+  - job_name: 'minio-nodes'
+    metrics_path: /minio/v2/metrics/cluster
+    static_configs:
+      - targets: ['minio:9000', 'minio-worker-2:9000', 'minio-worker-3:9000']
+
+  - job_name: 'cadvisor'
+    static_configs:
+      - targets: ['cadvisor:8080']
+
+  - job_name: 'fabric-app'
+    static_configs:
+      - targets: ['100.125.209.59:3001']
