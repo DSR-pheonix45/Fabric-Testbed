@@ -3,20 +3,20 @@ node_modules/
 dist/
 build/
 
-# Data and Logs
-*.log
-storage/
-tailscale/state/
-/master/storage/
-/worker/storage/
-/testbed/storage/
-/master/tailscale/state/
-/worker/tailscale/state/
-/testbed/tailscale/state/
+# Worker State and Data
+workers/*/storage/
+workers/*/tailscale/
+workers/*/config/*.env
+**/tailscaled.log.*
+**/tailscale.log.*
+**/state/*
+**/data/*
+**/peer/*
 
-# Environment
+# Local Environment
 .env
-*.env
+config/master.env
+*.log
 
 # System
 .DS_Store

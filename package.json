@@ -1,0 +1,13 @@
+{
+  "name": "fabric-master-root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Root orchestrator for Fabric Master Control Plane",
+  "scripts": {
+    "dev": "cd client-app/frontend && npm run dev --",
+    "server": "cd client-app && npm run server --",
+    "backend": "cd client-app && npm run server --",
+    "install-all": "npm install && npm install --prefix client-app && npm install --prefix client-app/frontend",
+    "start-infra": "docker-compose up -d"
+  }
+}

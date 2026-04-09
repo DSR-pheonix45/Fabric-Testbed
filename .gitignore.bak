@@ -1,0 +1,10 @@
+node_modules/
+wallet/
+storage/
+tailscale/state/
+*.log
+.env
+config/master.env
+workers/**/storage/
+workers/**/tailscale/state/
+workers/**/config/worker.env
